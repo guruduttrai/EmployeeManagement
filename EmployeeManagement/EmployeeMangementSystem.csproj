@@ -62,6 +62,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeManagement.cs" />
     <Compile Include="EmployeeType.cs" />
+    <Compile Include="Intern_Employee.cs" />
     <Compile Include="Permanent_Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -21,7 +21,7 @@ namespace EmpMgmt
                     switch (choice)
                     {
                         case 1:
-                            Console.WriteLine("1. Permanent Employee\n2. Contract Employee\n");
+                            Console.WriteLine("1. Permanent Employee\n2. Contract Employee\n3. Intern\n");
                             int HireType = Convert.ToInt32(Console.ReadLine());
                             switch (HireType)
                             {
@@ -48,6 +48,18 @@ namespace EmpMgmt
                                     Employee contract = new Contract_Employee(CName, CDeptt, CBasicSalary, CDuration);
                                     list.Add(contract);
                                     Console.WriteLine("Contractual Employee added successfully!");
+                                    break;
+
+                                case 3:
+                                    Console.WriteLine("Enter Name, Deptt, Basic and Internship Duration in months for Intern");
+                                    string IName = Console.ReadLine();
+                                    string IDeptt = Console.ReadLine();
+                                    double IBasicSalary = Convert.ToInt32(Console.ReadLine());
+                                    int IDuration = Convert.ToInt32(Console.ReadLine());
+
+                                    Employee intern = new Intern_Employee(IName, IDeptt, IBasicSalary, IDuration);
+                                    list.Add(intern);
+                                    Console.WriteLine("Intern added successfully!");
                                     break;
 
                                 default:

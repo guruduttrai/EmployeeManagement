@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpMgmt
 {
-    class Employee
+    abstract class Employee
     {
         private string Name;
         private readonly int Id;
@@ -75,9 +75,7 @@ namespace EmpMgmt
             return "Id : " + this.Id + "\nName : " + this.Name + "\nDeptt. : " + this.Deptt + "\nBasicSalary : " + this.BasicSalary;
         }
 
-        public virtual double CalculateSalary() {
-            return BasicSalary;
-        }    //eligible to be overridden
+        public abstract double CalculateSalary();
         
 
     }
